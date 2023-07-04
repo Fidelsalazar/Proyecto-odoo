@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+
+
+ <record id="aparcamiento_action" model="ir.actions.act_window">
+        <field name="name">Aparcamiento</field>
+        <field name="res_model">aparcamiento.aparcamiento</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="mantenimientos_action" model="ir.actions.act_window">
+        <field name="name">Registro de mantenimientos</field>
+        <field name="res_model">mantenimientos.mantenimientos</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+ 
+    <record id="vehiculo_action" model="ir.actions.act_window">
+        <field name="name">Registro de Vehiculos</field>
+        <field name="res_model">vehiculo.vehiculo</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+ <!-- Menu y acciones-->
+    <menuitem id="first_menu_root" name="Control de Aparcamiento" sequence="4"/>
+    <menuitem id="car_menu" parent="first_menu_root" name="Vehiculos" action="control.vehiculo_action"/>
+    <menuitem id="man_menu" parent="first_menu_root" name="Mantenimiento" action="control.mantenimientos_action"/>
+    <menuitem id="aparcamiento_menu" parent="first_menu_root" name="Aparcamiento" action="control.aparcamiento_action"/>
+
+</odoo>

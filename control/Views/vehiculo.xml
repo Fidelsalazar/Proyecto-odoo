@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+  <!-- Prueba tree view -->
+  <record id="vehiculo_view_tree" model="ir.ui.view">
+    <field name="name">vehiculo.view.tree</field>
+    <field name="model">vehiculo.vehiculo</field>
+    <field name="arch" type="xml">
+      <form string="">
+                <header>
+                   <button name="action_test" type="object" string="Contar vehiculo por modelo"  class="btn-primary"/>
+                </header>
+                <sheet>
+                     <div name="button_box" class="oe_button_box">
+                        <button name="checked" type="object" class="oe_stat_button" icon="fa-list-ul">
+                         <field name="total" string="Total de mantenimientos" widget="statinfo"/>
+                        </button>
+                    </div>
+                    <group>
+                        <field name="name"/>
+                        <field name="descripcion"/>
+                        <field name="modelo"/>
+                        <field name="construido"/>
+                        <field name="horaEntrada"/>
+                        <field name="horaSalida"/>
+                        <field name="consumo"/>
+                        <field name="estadoTecnico"/>
+                        <field name="añosUso"/>
+                        <field name="aparcamientoAsignada"/>
+                        <field name="mantenimientoRealizados"/>
+                        <field name="aparcamiento_id"/>
+                        <field name="mantenimientos_ids"/>
+                       
+                    </group>
+                    
+                </sheet>
+               
+            </form>
+    </field>
+  </record>
+  <!-- Prueba form view -->
+  <record id="vehiculo_view_form" model="ir.ui.view">
+    <field name="name">vehiculo.view.form</field>
+    <field name="model">vehiculo.vehiculo</field>
+    <field name="arch" type="xml">
+      <tree>
+          <field name="name"/>
+          <field name="descripcion"/>               
+          <field name="modelo"/>
+          <field name="horaEntrada"/>
+          <field name="horaSalida"/>
+          <field name="consumo"/>
+          <field name="estadoTecnico"/>
+          <field name="añosUso"/>
+          <field name="aparcamientoAsignada"/>
+          <field name="mantenimientoRealizados"/>
+          <field name="aparcamiento_id"/>
+          <field name="mantenimientos_ids"/>
+                       
+      </tree>
+    </field>
+  </record>
+</odoo>

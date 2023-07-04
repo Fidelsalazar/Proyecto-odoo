@@ -1,0 +1,40 @@
+<odoo>
+  <!-- Muestra tree view -->
+  <record id="mantenimientos_view_tree" model="ir.ui.view">
+    <field name="name">mantenimientos.view.tree</field>
+    <field name="model">mantenimientos.mantenimientos</field>
+    <field name="arch" type="xml">
+      <tree>
+         <field name="fechaSolicitud"/>
+         <field name="tipo"/>
+          <field name="costo"/>       
+          <field name="vehiculo_ids"/>     
+      </tree>
+    </field>
+  </record>
+  <!-- Muestra form view -->
+  <record id="mantenimientos_view_form" model="ir.ui.view">
+    <field name="name">mantenimientos.view.form</field>
+    <field name="model">mantenimientos.mantenimientos</field>
+    <field name="arch" type="xml">
+      <form string="">
+        <header>
+          <button name="action_test" type="object" string="Contar vehiculo por modelo" class="btn-primary"/>
+        </header>
+        <sheet>
+          <div name="button_box" class="oe_button_box">
+            <button name="checked" type="object" class="oe_stat_button" icon="fa-list-ul">
+              <field name="total" string="Total de vehiculos" widget="statinfo"/>
+            </button>
+          </div>
+          <group>
+            <field name="fechaSolicitud"/>
+            <field name="tipo"/>
+            <field name="costo"/>         
+            <field name="vehiculo_ids"/>
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+</odoo>

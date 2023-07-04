@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+  <!-- Control tree view -->
+  <record id="aparcamiento_view_tree" model="ir.ui.view">
+    <field name="name">aparcamiento.view.tree</field>
+    <field name="model">aparcamiento.aparcamiento</field>
+    <field name="arch" type="xml">
+      <tree>
+          <field name="name"/>
+          <field name="cant_plazas"/>
+          <field name="cant_vehiculo_estacionados"/>    
+          <field name="vehiculo_ids"/>  
+                
+       </tree>
+    </field>
+  </record>
+
+  <record id="aparcamiento_view_form" model="ir.ui.view">
+    <field name="name">aparcamiento.view.form</field>
+    <field name="model">aparcamiento.aparcamiento</field>
+    <field name="arch" type="xml">
+      <form string="">
+        <sheet>
+          <group>
+            <field name="name"/>
+            <field name="cant_plazas"/>
+            <field name="cant_vehiculo_estacionados"/>   
+             <field name="vehiculo_ids"/>  
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+</odoo>
